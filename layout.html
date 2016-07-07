@@ -1,0 +1,6 @@
+{% extends "!layout.html" %}
+{% set script_files = script_files + [pathto("html/_static/collapse.js", 1)] %}
+{% block sidebartoc %}
+    <h3>{{ _('Contents') }}</h3>
+    {{ toctree(includehidden=True, titles_only=True) }}
+{% endblock %}

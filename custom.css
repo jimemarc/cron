@@ -1,0 +1,213 @@
+/* Improve autodoc */
+
+/* Show reference in a box */
+dl.class,
+dl.function,
+dl.exception,
+dl.data {
+    background: #f3f6f6 !important;
+    border: 1px solid #D3D3D3 !important;
+}
+
+/* Extend reference heads to the width */
+dl.class dt,
+dl.function dt,
+dl.exception dt,
+dl.data dt {
+    width: 100% !important;
+}
+
+/* Improve box spacing */
+dl.class dd,
+dl.function dd,
+dl.exception dd,
+dl.data dd {
+  margin: 0 !important;
+  padding: 15px !important;
+}
+
+/* Remove namespace in reference, we know where we are thank you */
+dl.class dt code.descclassname,
+dl.function dt code.descclassname,
+dl.exception dt code.descclassname,
+dl.data dt code.descclassname {
+    display: none !important;
+}
+
+/* Make PlantUML SVGs responsive */
+object[type="image/svg+xml"] {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Tweak sidebar
+[class^="toctree-l"] {
+    color: #000000;
+    font-size: 1.2em;
+} */
+.wy-nav .wy-menu-vertical a {
+    color:#131313
+}
+
+.wy-nav .wy-menu-vertical a:hover {
+    background-color:#2980B9;
+    color:#fff
+}
+
+.wy-menu-vertical {
+    width:300px
+}
+.wy-menu-vertical header,.wy-menu-vertical p.caption {
+    height:32px;
+    display:inline-block;
+    line-height:32px;
+    padding:0 1.618em;
+    margin-bottom:0;
+    display:block;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:80%;
+    color:#555;
+    white-space:nowrap
+}
+.wy-menu-vertical ul {
+    margin-bottom:0
+}
+.wy-menu-vertical li.divide-top {
+    border-top:solid 1px #404040
+}
+.wy-menu-vertical li.divide-bottom {
+    border-bottom:solid 1px #404040
+}
+.wy-menu-vertical li.current {
+    background:#e3e3e3
+}
+.wy-menu-vertical li.current a {
+    color:gray;
+    border-right:solid 1px #c9c9c9;
+    padding:0.4045em 2.427em
+}
+.wy-menu-vertical li.current a:hover {
+    background:#d6d6d6
+}
+.wy-menu-vertical li code,.wy-menu-vertical li .rst-content tt,.rst-content .wy-menu-vertical li tt {
+    border:none;
+    background:inherit;
+    color:inherit;
+    padding-left:0;
+    padding-right:0
+}
+.wy-menu-vertical li span.toctree-expand {
+    display:block;
+    float:left;
+    margin-left:-1.2em;
+    font-size:0.8em;
+    line-height:1.6em;
+    color:#4d4d4d
+}
+.wy-menu-vertical li.on a,.wy-menu-vertical li.current>a {
+    color:#404040;
+    padding:0.4045em 1.618em;
+    font-weight:bold;
+    position:relative;
+    background:#fcfcfc;
+    border:none;
+    border-bottom:solid 1px #c9c9c9;
+    border-top:solid 1px #c9c9c9;
+    padding-left:1.618em -4px
+}
+.wy-menu-vertical li.on a:hover,.wy-menu-vertical li.current>a:hover {
+    background:#fcfcfc
+}
+.wy-menu-vertical li.on a:hover span.toctree-expand,.wy-menu-vertical li.current>a:hover span.toctree-expand {
+    color:gray
+}
+.wy-menu-vertical li.on a span.toctree-expand,.wy-menu-vertical li.current>a span.toctree-expand {
+    display:block;
+    font-size:0.8em;
+    line-height:1.6em;
+    color:#333
+}
+.wy-menu-vertical li.toctree-l1.current li.toctree-l2>ul,.wy-menu-vertical li.toctree-l2.current li.toctree-l3>ul {
+    display:none
+}
+.wy-menu-vertical li.toctree-l1.current li.toctree-l2.current>ul,.wy-menu-vertical li.toctree-l2.current li.toctree-l3.current>ul {
+    display:block
+}
+.wy-menu-vertical li.toctree-l2.current>a {
+    background:#c9c9c9;
+    padding:0.4045em 2.427em
+}
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
+    display:block;
+    background:#c9c9c9;
+    padding:0.4045em 4.045em
+}
+.wy-menu-vertical li.toctree-l2 a:hover span.toctree-expand {
+    color:gray
+}
+.wy-menu-vertical li.toctree-l2 span.toctree-expand {
+    color:#a3a3a3
+}
+.wy-menu-vertical li.toctree-l3 {
+    font-size:0.9em
+}
+.wy-menu-vertical li.toctree-l3.current>a {
+    background:#bdbdbd;
+    padding:0.4045em 4.045em
+}
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4>a {
+    display:block;
+    background:#bdbdbd;
+    padding:0.4045em 5.663em;
+    border-top:none;
+    border-bottom:none
+}
+.wy-menu-vertical li.toctree-l3 a:hover span.toctree-expand {
+    color:#444
+}
+.wy-menu-vertical li.toctree-l3 span.toctree-expand {
+    color:#666666
+}
+.wy-menu-vertical li.toctree-l4 {
+    font-size:1.1em
+}
+.wy-menu-vertical li.current ul {
+    display:block
+}
+.wy-menu-vertical li ul {
+    margin-bottom:0;
+    display:none
+}
+.wy-menu-vertical .local-toc li ul {
+    display:block
+}
+.wy-menu-vertical li ul li a {
+    margin-bottom:0;
+    color:#434343;
+    font-weight:normal
+}
+.wy-menu-vertical a {
+    display:inline-block;
+    line-height:18px;
+    padding:0.4045em 1.618em;
+    display:block;
+    position:relative;
+    font-size:90%;
+    color:#b3b3b3
+}
+.wy-menu-vertical a:hover {
+    background-color:#4e4a4a;
+    cursor:pointer
+}
+.wy-menu-vertical a:hover span.toctree-expand {
+    color:#b3b3b3
+}
+.wy-menu-vertical a:active {
+    background-color:#2980B9;
+    cursor:pointer;
+    color:#fff
+}
+.wy-menu-vertical a:active span.toctree-expand {
+    color:#fff
+}
