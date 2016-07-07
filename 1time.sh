@@ -1,5 +1,9 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $DIR
+
 git clone https://git-nos.rose.rdlabs.hpecorp.net/hpe/hpe-topology-common
 git clone https://git-nos.rose.rdlabs.hpecorp.net/hpe/hpe-topology-lib-communication
 git clone https://git.openswitch.net/openswitch/ops-topology-lib-vtysh
