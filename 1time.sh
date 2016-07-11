@@ -13,9 +13,16 @@ cp -v conf.py hpe-topology-common/doc/
 cp -v index.rst hpe-topology-common/doc/
 cp -v module.rst hpe-topology-common/doc/_templates/autoapi/
 cp -v custom.css hpe-topology-common/doc/_static/styles/
+cp -v collapse.js hpe-topology-common/doc/_static/
 cp -v layout.html hpe-topology-common/doc/_templates/
 cp -v ops-topology-lib-vtysh/doc/developer.rst hpe-topology-common/doc/
+mkdir -pv hpe-topology-lib-communication/doc/_templates/autoapi/
+cp -v module.rst hpe-topology-lib-communication/doc/_templates/autoapi/
 
 cd hpe-topology-common
+git commit -am'msg'
+cd ..
+
+cd hpe-topology-lib-communication
 git commit -am'msg'
 cd ..
