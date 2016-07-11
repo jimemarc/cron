@@ -3,9 +3,9 @@
 EMAIL=mjmata@hpe.com
 LOG=cron.log
 STATE=status
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd $DIR
+cd /home/pba/cron/
 export http_proxy="http://web-proxy.rose.hpecorp.net:8088"
 export https_proxy="http://web-proxy.rose.hpecorp.net:8088"
 export ftp_proxy="http://web-proxy.rose.hpecorp.net:8088"
@@ -14,7 +14,7 @@ echo "----------------------------------------" >> $LOG
 echo >> $LOG
 date >> $LOG
 
-function error {
+error() {
     cd ..
     echo $1 >> $LOG
     cat $STATE | read s
