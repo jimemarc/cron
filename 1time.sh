@@ -22,7 +22,3 @@ cp -v module.rst hpe-topology-lib-communication/doc/_templates/autoapi/
 cd hpe-topology-common
 git commit -am'msg'
 cd ..
-
-cd hpe-topology-lib-communication
-git commit -am'msg'
-cd ..
