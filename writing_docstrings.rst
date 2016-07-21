@@ -187,7 +187,7 @@ This will produce:
     To write lists, leave a blank line before and after the list and don't indent the items.
 
     * This is a bullet list
-    * You can use *, -, +
+    * You can use \*, -, +
 
     * The blank line above is optional. For multiline items
       you must follow the item indentation.
