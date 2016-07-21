@@ -10,11 +10,12 @@ export http_proxy="http://web-proxy.rose.hpecorp.net:8088"
 export https_proxy="http://web-proxy.rose.hpecorp.net:8088"
 export ftp_proxy="http://web-proxy.rose.hpecorp.net:8088"
 
+/usr/sbin/logrotate -s logstatus logrotate.conf
 echo "====================================================" >> $LOG
 echo >> $LOG
 date >> $LOG
 
-error() {
+function error() {
     cd ..
     echo $1 >> $LOG
     cat $STATE | read s
@@ -52,9 +53,9 @@ cp -a ops-topology-lib-vtysh/lib/topology_lib_vtysh/ hpe-topology-common/lib
 
 cd hpe-topology-common
 
-pandoc doc/how_to_guide.md -o doc/how_to_guide.rst
-pandoc doc/writing_docstrings.md -o doc/writing_docstrings.rst
-pandoc doc/ops_tc_library_guidelines.md -o doc/ops_tc_library_guidelines.rst
+#pandoc doc/how_to_guide.md -o doc/how_to_guide.rst
+#pandoc doc/writing_docstrings.md -o doc/writing_docstrings.rst
+#pandoc doc/ops_tc_library_guidelines.md -o doc/ops_tc_library_guidelines.rst
 
 /usr/local/bin/tox -e doc 2>> ../$LOG
 if [ $? -ne 0 ]; then

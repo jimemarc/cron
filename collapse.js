@@ -1,3 +1,20 @@
+$(function () {
+    $('.toctree-wrapper').jstree();
+    $('.toctree-wrapper').on("changed.jstree", function (e, data) {
+        console.log(data.selected);
+    });
+    $('button').on('click', function () {
+        $('.toctree-wrapper').jstree(true).select_node('child_node_1');
+        $('.toctree-wrapper').jstree('select_node', 'child_node_1');
+        $.jstree.reference('.toctree-wrapper').select_node('child_node_1');
+    });
+    $('.toctree-wrapper').bind("select_node.jstree", function (e, data) {
+        $('.toctree-wrapper').jstree('save_state');
+    }) ;
+    $('.toctree-wrapper').on("activate_node.jstree", function(e,data){
+       window.location.href = data.node.a_attr.href;
+    })
+});
 function collapse_dd(){
         if ($(this).hasClass('collapsed')) {
             $(this).removeClass('collapsed')
