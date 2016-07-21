@@ -35,7 +35,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz',
-    'autoapi.sphinx'
+    'autoapi.sphinx',
+    'sphinx.ext.viewcode'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -162,9 +163,9 @@ html_last_updated_fmt = '%b %d, %Y @ %I:%M %p (updated every 15 minutes)'
 
 # Custom sidebar templates, maps document names to template names.
 # html_sidebars = {}
-html_sidebars = {
-   '**': ['globaltoc.html', 'relations.html', 'searchbox.html'],
-}
+# html_sidebars = {
+#    '**': ['globaltoc.html', 'relations.html', 'searchbox.html'],
+# }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
