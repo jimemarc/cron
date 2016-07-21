@@ -163,7 +163,7 @@ html_last_updated_fmt = '%b %d, %Y @ %I:%M %p (updated every 15 minutes)'
 # Custom sidebar templates, maps document names to template names.
 # html_sidebars = {}
 html_sidebars = {
-   '**': ['globaltoc.html', 'localtoc.html', 'relations.html', 'searchbox.html'],
+   '**': ['globaltoc.html', 'relations.html', 'searchbox.html'],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
