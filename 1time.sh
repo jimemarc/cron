@@ -3,6 +3,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd $DIR
+export http_proxy="http://web-proxy.rose.hpecorp.net:8088"
+export https_proxy="http://web-proxy.rose.hpecorp.net:8088"
+export ftp_proxy="http://web-proxy.rose.hpecorp.net:8088"
 
 git clone https://git-nos.rose.rdlabs.hpecorp.net/hpe/hpe-topology-common
 git clone https://git-nos.rose.rdlabs.hpecorp.net/hpe/hpe-topology-lib-communication
