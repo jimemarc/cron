@@ -162,6 +162,9 @@ html_last_updated_fmt = '%b %d, %Y @ %I:%M %p (updated every 15 minutes)'
 
 # Custom sidebar templates, maps document names to template names.
 # html_sidebars = {}
+html_sidebars = {
+   '**': ['globaltoc.html', 'localtoc.html', 'relations.html', 'searchbox.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -171,7 +174,7 @@ html_last_updated_fmt = '%b %d, %Y @ %I:%M %p (updated every 15 minutes)'
 # html_domain_indices = True
 
 # If false, no index is generated.
-html_use_index = False
+# html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 # html_split_index = False

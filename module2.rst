@@ -6,6 +6,10 @@
    :members:
    :show-inheritance:
 
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: {{ item }}
+      :parts: 1
+
    .. contents::
       :local:
 {##}

@@ -206,10 +206,10 @@ Contributing to the library
 The following is expected with each contribution:
 
 1. Follow the coding guidelines defined in the `OPS Topology Common
-   Library Guidelines <ops_tc_library_guidelines>`__ document.
+   Library Guidelines <ops_tc_library_guidelines.html>`_ document.
 2. Self-documented code using docstrings. Follow the coding guidelines
    defined in the `Writing doctrings for
-   Sphinx <writing_docstrings>`__ document for further details.
+   Sphinx <writing_docstrings.html>`_ document for further details.
 3. Tests for every new feature or change to existing features.
 4. All existing tests pass. Verify by running tox in the root of the
    repo before sending for review.

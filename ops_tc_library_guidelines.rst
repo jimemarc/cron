@@ -31,7 +31,7 @@ not, coordinate with the common library maintainers on how to contribute
 that code.
 
 For the organization of code itself, refer to the `How to
-guide <how_to_guide>`__.
+guide <how_to_guide.html>`__.
 
 Guidelines
 ----------
@@ -294,4 +294,4 @@ Usage
         assert service.is_running(node=sw1, service="restd", step=step)
 
 Follow the coding guidelines defined in the `Writing doctrings for
-Sphinx <writing_docstrings>`__ document for further details.
+Sphinx <writing_docstrings.html>`_ document for further details.
