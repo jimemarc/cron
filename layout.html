@@ -1,9 +1,8 @@
 {% extends "!layout.html" %}
-{% set script_files = script_files + [pathto("_static/jquery-3.1.0.min.js", 1)] %}
 {% set script_files = script_files + [pathto("_static/jstree/jstree.min.js", 1)] %}
 {% set css_files = css_files + ['_static/jstree/themes/default/style.min.css'] %}
 {% set script_files = script_files + [pathto("_static/collapse.js", 1)] %}
 {% block sidebartoc %}
     <h3>{{ _('Contents') }}</h3>
-    {{ toctree(includehidden=True, titles_only=True) }}
+    {{ toctree(includehidden=True) }}
 {% endblock %}
