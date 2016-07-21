@@ -4,6 +4,7 @@
 
 .. automodule:: {{ node.name }}
    :members:
+   :show-inheritance:
 
    .. contents::
       :local:

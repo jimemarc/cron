@@ -16,7 +16,7 @@ cp -v index.rst hpe-topology-common/doc/
 cp -v how_to_guide.rst hpe-topology-common/doc/
 cp -v writing_docstrings.rst hpe-topology-common/doc/
 cp -v ops_tc_library_guidelines.rst hpe-topology-common/doc/
-cp -v module.rst hpe-topology-common/doc/_templates/autoapi/
+cp -v module2.rst hpe-topology-common/doc/_templates/autoapi/
 cp -v custom.css hpe-topology-common/doc/_static/styles/
 cp -v collapse.js hpe-topology-common/doc/_static/
 cp -v jquery-3.1.0.min.js hpe-topology-common/doc/_static/

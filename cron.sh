@@ -39,10 +39,6 @@ git pull 2>> ../$LOG
 if [ $? -ne 0 ]; then
     error "NOSdoc: lib-communication: Merge conflict"
 fi
-/usr/local/bin/tox -e doc 2>> ../$LOG
-if [ $? -ne 0 ]; then
-    error "NOSdoc: lib-communication: Sphinx build failed"
-fi
 cd ..
 
 cd ops-topology-lib-vtysh
@@ -50,18 +46,15 @@ git pull 2>> ../$LOG
 if [ $? -ne 0 ]; then
     error "NOSdoc: lib-vtysh: Merge conflict"
 fi
-rm -r
-/usr/local/bin/tox -e doc 2>> ../$LOG
-if [ $? -ne 0 ]; then
-    error "NOSdoc: lib-vtysh: Sphinx build failed"
-fi
 cd ..
 
 rm -rf hpe-topology-common/doc/topology_common
 rm -rf hpe-topology-common/doc/topology_lib_communication
 rm -rf hpe-topology-common/doc/topology_lib_vtysh
-cp -a hpe-topology-lib-communication/doc/topology_lib_communication/ hpe-topology-common/doc
-cp -a ops-topology-lib-vtysh/doc/topology_lib_vtysh/ hpe-topology-common/doc
+rm -rf hpe-topology-common/lib/topology_lib_communication/
+rm -rf hpe-topology-common/lib/topology_lib_vtysh/
+cp -a hpe-topology-lib-communication/lib/topology_lib_communication/ hpe-topology-common/lib
+cp -a ops-topology-lib-vtysh/lib/topology_lib_vtysh/ hpe-topology-common/lib
 
 cd hpe-topology-common
 
