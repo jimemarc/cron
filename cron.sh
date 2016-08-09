@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EMAIL=mjmata@hpe.com
+EMAIL='mjmata@hpe.com'
 LOG=cron.log
 STATE=status
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -58,9 +58,10 @@ cp -a ops-topology-lib-vtysh/lib/topology_lib_vtysh/ hpe-topology-common/lib
 
 cd hpe-topology-common
 
-#pandoc doc/how_to_guide.md -o doc/how_to_guide.rst
-#pandoc doc/writing_docstrings.md -o doc/writing_docstrings.rst
-#pandoc doc/ops_tc_library_guidelines.md -o doc/ops_tc_library_guidelines.rst
+pandoc doc/how_to_guide.md -o doc/how_to_guide.rst
+pandoc doc/ops_tc_library_guidelines.md -o doc/ops_tc_library_guidelines.rst
+pandoc doc/writing_docstrings.md -o doc/writing_docstrings.rst
+sed -i 's/\.md/\.html/g' doc/how_to_guide.rst doc/ops_tc_library_guidelines.rst
 
 /usr/local/bin/tox -e doc 2>> ../$LOG
 if [ $? -ne 0 ]; then
