@@ -71,7 +71,7 @@ fi
 cp doc/how_to_guide.md .tox/doc/tmp/html
 cp doc/writing_docstrings.md .tox/doc/tmp/html
 cp doc/ops_tc_library_guidelines.md .tox/doc/tmp/html
-cp -a .tox/doc/tmp/html /var/www/
+cp -a .tox/doc/tmp/html/* /var/www/html/ntl/
 if [ $? -ne 0 ]; then
     error "NOSdoc: Could not update server"
 fi
